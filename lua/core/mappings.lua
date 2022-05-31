@@ -71,7 +71,7 @@ M.bufferline = {
       -- close buffer + hide terminal buffer
       ["<leader>x"] = {
          function()
-            nvchad.close_buffer()
+            require("core.utils").close_buffer()
          end,
          "   close buffer",
       },
@@ -101,9 +101,6 @@ M.comment = {
 
 M.lspconfig = {
    -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
-
-   -- define all paths from which these maps should not be applied through the mapping function
-   ignore = { "/lua/custom/init.lua", "/lua/plugins/configs/whichkey.lua" },
 
    n = {
       ["gD"] = {
