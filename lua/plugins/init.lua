@@ -1,21 +1,12 @@
-local present, packer = pcall(require, "plugins.packerInit")
-
-if not present then
-   return false
-end
-
 local plugins = {
+
    ["nvim-lua/plenary.nvim"] = {},
    ["lewis6991/impatient.nvim"] = {},
-
-   ["wbthomason/packer.nvim"] = {
-      event = "VimEnter",
-   },
-
+   ["wbthomason/packer.nvim"] = {},
    ["NvChad/extensions"] = {},
 
    ["NvChad/base46"] = {
-      after = "packer.nvim",
+      after = "plenary.nvim",
       config = function()
          local ok, base46 = pcall(require, "base46")
 
@@ -192,15 +183,10 @@ local plugins = {
          require("plugins.configs.others").comment()
       end,
    },
-   
-   ["akinsho/flutter-tools.nvim"] = {
-     config = function()
-       require("flutter-tools").setup{} -- use defaults
-     end,
-   },
 
    -- file managing , picker etc
    ["kyazdani42/nvim-tree.lua"] = {
+      ft = "alpha",
       cmd = { "NvimTreeToggle", "NvimTreeFocus" },
       config = function()
          require "plugins.configs.nvimtree"
@@ -220,18 +206,9 @@ local plugins = {
          nvchad.packer_lazy_load "which-key.nvim"
       end,
       config = function()
-         require "plugins.configs.whichkey"
+         require("plugins.configs.whichkey").setup()
       end,
    },
 }
 
-plugins = nvchad.remove_default_plugins(plugins)
-
--- merge user plugin table & default plugin table
-plugins = nvchad.plugin_list(plugins)
-
-return packer.startup(function(use)
-   for _, v in pairs(plugins) do
-      use(v)
-   end
-end)
+require("core.packer").run(plugins)

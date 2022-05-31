@@ -45,16 +45,6 @@ opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
 
-if vim.fn.has('win32') == 1 then
-   opt.shell = 'pwsh.exe -nol'
-   opt.shellcmdflag = '-nop -c'
-   opt.shellquote = '"'
-   opt.shellxquote = ''
-   opt.shellpipe = '| Out-File -Encoding UTF8 %s'
-   opt.shellredir = '| Out-File -Encoding UTF8 %s'
-end
-
-
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
 
