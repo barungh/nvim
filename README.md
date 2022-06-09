@@ -17,7 +17,8 @@ rm -rf ~/.cache/nvim
 
 ## To install Neovim  
 ```bash
-git clone https://github.com/barungh/nvim ~/.config/nvim --depth 1 ; nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+git clone https://github.com/barungh/nvim/tree/master/lua/custom ~/.config/nvim/lua/custom --depth 1 ; nvim
 ```
 
 ### Thank You 😎
