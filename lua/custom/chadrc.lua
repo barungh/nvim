@@ -5,6 +5,12 @@ M.ui = {
    theme = "gruvchad",
 }
 
+M.mappings {
+  i = {
+    ["jk"] = {"<ESC>", "=> Escape to normal mode"},
+  },
+}
+
 M.plugins = {
    options = {
       lspconfig = {
