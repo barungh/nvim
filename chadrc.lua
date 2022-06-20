@@ -2,14 +2,10 @@
 local M = {}
 
 M.ui = {
-   theme = "gruvchad",
+   theme = "ayu-dark",
 }
 
-M.mappings {
-  i = {
-    ["jk"] = {"<ESC>", "=> Escape to normal mode"},
-  },
-}
+M.mappings = require "custom.mappings"
 
 M.plugins = {
    options = {
