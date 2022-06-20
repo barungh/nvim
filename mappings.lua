@@ -2,7 +2,7 @@ local M = {}
 
 M.abc = {
   i = {
-    ["jk"] = {"ESC", "back to normal"}
+    ["jk"] = {"<ESC>", "back to normal"}
   }
 }
 
