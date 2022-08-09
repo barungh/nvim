@@ -21,5 +21,15 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 git clone https://github.com/barungh/nvim ~/.config/nvim/lua/custom --depth 1 ; nvim
 ```
 
+## Install related Lsp servers
+```
+:Mason
+```
+
+This will bring a lsp installer ui on your screen,  
+press 2  
+you will find a list of lsp servers  
+you will need to install lsp server which you configured in custom/lspconfig.lua file  
+
 ### Thank You 😎
 

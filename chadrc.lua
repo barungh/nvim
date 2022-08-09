@@ -1,18 +1,25 @@
--- Hare Krishna
+-- Hare Krishna 
+
 local M = {}
 
+-- make sure you maintain the structure of `core/default_config.lua` here,
+-- example of changing theme:
+
 M.ui = {
-   theme = "ayu-dark",
+  theme = "ayu-dark",
 }
 
 M.mappings = require "custom.mappings"
 
 M.plugins = {
-   options = {
-      lspconfig = {
-         setup_lspconf = "custom.lspconfig",
-      },
-   },
+  user = {
+    ["neovim/nvim-lspconfig"] = {
+      config = function()
+        require "plugins.configs.lspconfig"
+        require "custom.lspconfig"
+      end,
+    },
+  }
 }
 
 return M
