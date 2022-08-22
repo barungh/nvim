@@ -15,10 +15,16 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
 
-## To install Neovim  
+## To install Neovim -- Linux 
 ```bash
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 git clone https://github.com/barungh/nvim ~/.config/nvim/lua/custom --depth 1 ; nvim
+```
+
+## To install Neovim -- Windows  
+```ps
+git clone https://github.com/NvChad/NvChad $HOME\AppData\Local\nvim --depth 1
+git clone https://github.com/barungh/nvim "$env:LOCALAPPDATA\nvim\lua\custom" --depth 1
 ```
 
 ## Install related Lsp servers
