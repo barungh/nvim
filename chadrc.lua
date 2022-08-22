@@ -12,14 +12,16 @@ M.ui = {
 M.mappings = require "custom.mappings"
 
 M.plugins = {
-  user = {
-    ["neovim/nvim-lspconfig"] = {
-      config = function()
-        require "plugins.configs.lspconfig"
-        require "custom.lspconfig"
-      end,
-    },
-  }
+  user = require 'custom.plugins',
+
+  -- user = {
+  --   ["neovim/nvim-lspconfig"] = {
+  --     config = function()
+  --       require "plugins.configs.lspconfig"
+  --       require "custom.lspconfig"
+  --     end,
+  --   },
+  -- }
 }
 
 return M
